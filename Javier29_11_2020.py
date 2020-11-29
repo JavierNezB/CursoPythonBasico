@@ -624,6 +624,440 @@ print(lista)
 print(lista[2])
 
 
+# # Clase 16
+# Listas
+
+# In[1]:
+
+
+bandas = ['Wolfmothert', 'Banda MS', 'Muse', 'Ghost', 'Sleeping whit sirens', 'Interpol']
+
+
+# In[2]:
+
+
+metal = bandas [3]
+print(metal)
+
+
+# In[3]:
+
+
+norte = bandas [1]
+print(norte)
+
+
+# In[4]:
+
+
+grupos = bandas [4:]
+print(grupos)
+
+
+# In[5]:
+
+
+print(len(bandas))
+
+
+# In[8]:
+
+
+# agregar un nuevo elemento
+bandas.append('Little jesus')
+
+
+# In[9]:
+
+
+print(bandas)
+
+
+# In[10]:
+
+
+bandas[2] = 'Bloc Party'
+
+
+# In[11]:
+
+
+print(bandas)
+
+
+# In[13]:
+
+
+variables = bandas[2:5]
+
+
+# In[15]:
+
+
+print(variables)
+
+
+# In[16]:
+
+
+var2 = bandas[:2]
+
+
+# In[17]:
+
+
+print(var2)
+
+
+# In[18]:
+
+
+var3 = bandas[5:]
+print(var3)
+
+
+# In[19]:
+
+
+var4 = []
+var4.append(bandas[2])
+var4.append(bandas[5])
+print(var4)
+
+
+# In[20]:
+
+
+# Agregar elementos en una lista en cualquier posicion
+print(bandas)
+bandas.insert(1, 'Artic Monkeys')
+
+
+# In[21]:
+
+
+print(bandas)
+
+
+# In[22]:
+
+
+# Eliminar elementos de una lista a traves de su nombre
+bandas.remove('Banda MS')
+
+
+# In[23]:
+
+
+print(bandas)
+
+
+# In[24]:
+
+
+for elemento in bandas:
+    print('{} Es la mejor banda'.format(elemento))
+
+
+# In[29]:
+
+
+lista1 = [1,2,3,4,5,6]
+lista2 = []
+indice = 0
+for num in lista1:
+    lista2.append(num**2)
+    print(indice, num)
+    indice += 1
+    
+print(lista1)
+print(lista2)
+
+
+# In[31]:
+
+
+for i in range (5,20,2):
+    print(i)
+
+
+# In[33]:
+
+
+for i in range (30,20,-1):
+    print(i)
+
+
+# In[67]:
+
+
+cad = input('Introduce una cadena: ')
+indice = len(cad)
+for p in range (indice, 0, -1):
+    p -= 1
+    print(cad[p])
+
+
+# In[69]:
+
+
+#Tarea
+i = int(input('introduce un número positivo'))
+if i > 0:
+    print("hola")
+else:
+    print("Número incorrecto")
+
+
+# In[13]:
+
+
+var = input("Ingresa un numero: ")
+try:
+    var = int(var)
+    print(var)
+except:
+    print('Dato no valido')
+
+
+# In[12]:
+
+
+# While
+
+i = 0
+while i < 10:
+    print("Hola ", i)
+    i += 1
+
+
+# In[1]:
+
+
+#Tarea
+
+num = input("Ingresa un número: ")
+var = 0
+try:
+    num = int(num)
+    while num != 0:
+        var += num
+        num -= 1
+except:
+    print("Valor no valido.")
+
+print("Suma total: ", var)
+
+
+# In[41]:
+
+
+i = 1
+while i <= 100: 
+    if i%5 == 0  and i%3 == 0:
+        print(i, "trentacinque")
+    elif i%5 == 0:
+        print(i, "cinque")
+    elif i%3 == 0:
+        print(i, "tre")
+    else:
+        print(i)
+    i += 1
+
+
+# In[55]:
+
+
+var = input("Ingresa una cadena: ")
+var2 = input("Ingresa la letra a buscar: ")
+n = len(var) - 1
+var3 = 0
+
+while n != 0:
+    if var[n] == var2:
+        var3 += 1
+    n -= 1    
+print("Número de aparición: ", var3)
+
+
+# In[60]:
+
+
+num = [1, 2, 8, 4, 5, 6, 7]
+num2 = [11, 222, 333, 44]
+
+
+# In[61]:
+
+
+num.extend(num2)
+print (num)
+
+
+# In[62]:
+
+
+num.count(2)
+
+
+# In[63]:
+
+
+num.sort()
+print(num)
+
+
+# In[65]:
+
+
+num.sort(reverse = True)
+print(num)
+
+
+# In[66]:
+
+
+lista = ["ho"]
+print(lista)
+
+
+# In[67]:
+
+
+lista * 5
+print(lista * 5)
+
+
+# # Clase 18
+# pop()
+
+# In[3]:
+
+
+bandas = ['Wolfmothert', 'Banda MS', 'Muse', 'Ghost', 'Sleeping whit sirens', 'Interpol']
+
+
+# In[5]:
+
+
+lis = bandas.pop(1)
+
+
+# In[6]:
+
+
+print(lis)
+
+
+# In[8]:
+
+
+#Tuplas
+
+bandas_tupla = ('Wolfmothert', 'Banda MS', 'Muse', 'Ghost', 'Sleeping whit sirens', 'Interpol')
+bandas_listas = ['Wolfmothert', 'Banda MS', 'Muse', 'Ghost', 'Sleeping whit sirens', 'Interpol']
+
+print(bandas_tupla)
+print(bandas_listas)
+
+
+# In[14]:
+
+
+bandas_listas[0]='Banda MS'
+
+
+# In[15]:
+
+
+bandas_listas
+
+
+# In[17]:
+
+
+#No se pueden modificar
+bandas_tupla[0]='Banda MS'
+
+
+# In[33]:
+
+
+var = [1, 2, 3, 4]
+print(var[1])
+
+print(var[:2])
+
+print(var[1:3])
+
+print(var[2:])
+
+for i in var:
+    print(i)
+
+
+# In[43]:
+
+
+#Diccionarios
+
+d = {'rock':'Estefania', 'banda':'Ulises', 'metal':'david'}
+
+
+# In[44]:
+
+
+print(d['rock'])
+
+
+# In[45]:
+
+
+d ['pop'] = ['carlos','arlette','javier']
+
+
+# In[47]:
+
+
+print(d)
+
+
+# In[48]:
+
+
+d ['banda'] = 'isai'
+
+
+# In[49]:
+
+
+print(d)
+
+
+# In[52]:
+
+
+d['pop'][1] = 'Estafniaa'
+
+
+# In[53]:
+
+
+print(d)
+
+
+# In[54]:
+
+
+del(d['metal'])
+
+
+# In[55]:
+
+
+print(d)
+
+
 # In[ ]:
 
 
